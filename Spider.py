@@ -4,11 +4,13 @@ import aiofiles
 
 
 class Spider(object):
+    
     """
     This class is used for scraping the images.
     """
     
     def __init__(self, output_directory_path, num_of_semaphore):
+        
         """
         This is a constructor for class Spider.
 
@@ -16,10 +18,12 @@ class Spider(object):
             output_directory_path: The path of the output directory.
             num_of_semaphore: The number of semaphores.
         """
+        
         self.semaphore = asyncio.Semaphore(num_of_semaphore)
         self.output_directory_path = output_directory_path
 
     async def download(self, url):
+        
         """
         This is an asynchronous function of downloading images
         by URLs.
@@ -33,6 +37,7 @@ class Spider(object):
         Raises:
             ClientConnectorError: Cannot connect to host.
         """
+        
         try:
             async with self.semaphore:
                 async with aiohttp.ClientSession() as session:
