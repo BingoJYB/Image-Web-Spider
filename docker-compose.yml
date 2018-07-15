@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+    spider:
+        image: spider  # Image name
+        build:
+            context: .  # Use Dockerfile in current folder
+        deploy:
+            replicas: 5  # Number of replica
+            resources:
+                limits:
+                    cpus: "0.1"  # Limit useness of CPU
+                    memory: 50M  # Linit useness of RAM
+            restart_policy:
+                condition: on-failure  # Immediately restart containers if one fails
+        ports:
+            - "4000:80"  # Map port 4000 on the host to spider’s port 80.
+        volumes:
+            - ./images:/images  # Mount host directory to directory in the container
+
+        
