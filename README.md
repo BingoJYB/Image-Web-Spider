@@ -23,5 +23,3 @@
 6. Verify the deployment on multiple Debian machines by
 
         docker service ls
-  
-  
