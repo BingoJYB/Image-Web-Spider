@@ -4,9 +4,7 @@
 
         docker run -d -p 4000:80 -v &(pwd)/images:/images bingojyb/webspider:main
 
-In this command, '-p 4000:80' maps the host port 4000 to the container port 80, a HTTP port for communication and messages. '-v
-&(pwd)/images:/images' mounts the 'images' directory created in Dockerfile to '/images' in the container for the downloaded
-images.
+   In this command, '-p 4000:80' maps the host port 4000 to the container port 80, a HTTP port for communication and messages.    '-v &(pwd)/images:/images' mounts the 'images' directory created in Dockerfile to '/images' in the container for the            downloaded images.
 
 2. Use the swarm mode and make the host be swarm manager by
 
