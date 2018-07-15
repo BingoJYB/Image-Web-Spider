@@ -1,7 +1,7 @@
 version: '3.1'
 services:
     spider:
-        image: spider  # Image name
+        image: bingojyb/webspider:main  # Image name
         build:
             context: .  # Use Dockerfile in current folder
         deploy:
