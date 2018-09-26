@@ -1,4 +1,4 @@
-# WebSpider
+# Image-Web-Spider
 
 1. Get an image from 'bingojyb/webspider' docker repository and to create the container by the following command:
 
